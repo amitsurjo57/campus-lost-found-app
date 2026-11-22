@@ -1,0 +1,21 @@
+[project]
+name = "campus-lost-found-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "amitsurjo57", email = "amitsurjo57@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.162.5",
+    "mysql-connector-python>=26.10.0",
+    "sqlmodel>=0.0.49",
+]
+
+[project.scripts]
+campus-lost-found-app = "campus_lost_found_app:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
