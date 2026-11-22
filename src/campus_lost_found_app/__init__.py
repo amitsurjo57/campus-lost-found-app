@@ -14,6 +14,12 @@ mydb = mysql.connector.connect(
     database="railway"
 )
 
+@app.get('/')
+def root():
+    return {
+        'message' : 'Welcome to campus beacon'
+    }
+
 @app.get("/users")
 async def get_users():
     cursor = mydb.cursor(dictionary=True)
